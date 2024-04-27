@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ProyectoBanca.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Cuentas : Migration
+    public partial class Decimal : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,7 @@ namespace ProyectoBanca.Data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Nombre = table.Column<string>(type: "text", nullable: false),
-                    SaldoInicial = table.Column<string>(type: "text", nullable: false),
+                    SaldoInicial = table.Column<decimal>(type: "numeric", nullable: true),
                     Email = table.Column<string>(type: "text", nullable: false),
                     Tipo = table.Column<string>(type: "text", nullable: false)
                 },
