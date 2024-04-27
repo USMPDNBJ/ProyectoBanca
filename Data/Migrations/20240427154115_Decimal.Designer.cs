@@ -12,8 +12,8 @@ using ProyectoBanca.Data;
 namespace ProyectoBanca.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240427145806_Cuentas")]
-    partial class Cuentas
+    [Migration("20240427154115_Decimal")]
+    partial class Decimal
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -241,9 +241,8 @@ namespace ProyectoBanca.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("SaldoInicial")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<decimal?>("SaldoInicial")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("Tipo")
                         .IsRequired()

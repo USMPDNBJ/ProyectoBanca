@@ -18,7 +18,7 @@ namespace ProyectoBanca.Models
         [NotNull]
         public String? Nombre { get; set; }
         [NotNull]
-        public String? SaldoInicial { get; set; }
+        public Decimal? SaldoInicial { get; set; }
         [NotNull]
         public String? Email { get; set; }
         [NotNull]

@@ -238,9 +238,8 @@ namespace ProyectoBanca.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("SaldoInicial")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<decimal?>("SaldoInicial")
+                        .HasColumnType("numeric");
 
                     b.Property<string>("Tipo")
                         .IsRequired()
